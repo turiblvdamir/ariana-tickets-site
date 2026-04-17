@@ -1,0 +1,39 @@
+# Allow all search engines to crawl the entire site
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /sitemap.xml
+
+# Specify sitemap location
+Sitemap: https://turiblvdamir.github.io/ariana-tickets-site/sitemap.xml
+
+# Crawl delay to be respectful to servers (optional)
+Crawl-delay: 1
+
+# Google-specific instructions
+User-agent: Googlebot
+Allow: /
+Allow: /index.html
+Sitemap: https://turiblvdamir.github.io/ariana-tickets-site/sitemap.xml
+
+# Bing-specific instructions
+User-agent: bingbot
+Allow: /
+Sitemap: https://turiblvdamir.github.io/ariana-tickets-site/sitemap.xml
+
+# Prevent crawling of any potential admin or private paths (if they existed)
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /cgi-bin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
+
+# Prevent crawling of common system files
+Disallow: /*.log$
+Disallow: /*.bak$
+Disallow: /*.tmp$
+
+# Prevent crawling of non-existent paths that could cause errors
+Disallow: /*?*
+Disallow: /search
